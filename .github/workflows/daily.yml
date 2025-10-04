@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
 name: Daily Contribution
 on:
   schedule:
@@ -38,10 +37,6 @@ on:
                                                                                                                                                       git remote set-url origin https://x-access-token:${PAT}@github.com/${{ github.repository }}
                                                                                                                                                                 git add activity.txt
                                                                                                                                                                           git commit -m "Daily contribution: $(date -u)" || echo "Nothing to commit"
-      - name: Update activity log
-        run: |
-          echo "Commit on $(date)" >> activity.txt
-
       - name: Set up Git
         run: |
           git config --global user.name "mmpbrother94"
