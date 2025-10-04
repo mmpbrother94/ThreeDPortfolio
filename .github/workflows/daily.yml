@@ -9,8 +9,28 @@ jobs:
   commit:
     runs-on: ubuntu-latest
 
-name: Daily Contribution
+      steps:
+              - name: Checkout repository
+                        uses: actions/checkout@v3
+                                  with:
+                                              persist-credentials: false
+                                                          token: ${{ secrets.PAT }}
 
+                                                                          - name: Update log
+                                                                                    run: echo "$(date): Daily commit" >> log.txt
+
+                                                                                                    - name: Configure git
+                                                                                                              run: |
+                                                                                                                          git config --global user.email "manoharmanish03359@gmail.com"
+                                                                                                                                      git config --global user.name "mmpbrother94"
+                                                                                                                                              
+                                                                                                                                                      - name: Commit and push
+                                                                                                                                                                run: |
+                                                                                                                                                                            git add .
+                                                                                                                                                                                        git commit -m "Daily commit: $(date)"
+                                                                                                                                                                                                    git push
+                                                                                                                                                                                                              env:
+                                                                                                                                                                                                                          GITHUB_TOKEN: ${{ secrets.PAT }}
 on:
   schedule:
       - cron: '0 0 * * *'
