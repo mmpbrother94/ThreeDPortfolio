@@ -9,8 +9,130 @@ jobs:
   commit:
     runs-on: ubuntu-latest
 
-    steps:
 name: Daily Contribution
+
+on:
+  schedule:
+      - cron: '0 0 * * *'
+        workflow_dispatch:
+        
+        jobs:
+          commit:
+              runs-on: ubuntu-latest
+                  steps:
+                        - name: Checkout repository
+                                uses: actions/checkout@v3
+                                        with:
+                                                  persist-credentials: false
+                                                            token: ${{ secrets.PAT }}
+                                                                  
+                                                                        - name: Update activity log
+                                                                                run: |
+                                                                                          echo "Commit on $(date)" >> activity.txt
+                                                                                                
+name: Daily Contribution
+
+on:
+  schedule:
+      - cron: '0 0 * * *'
+        workflow_dispatch:
+        
+        jobs:
+          commit:
+              runs-on: ubuntu-latest
+                  steps:
+                        - name: Checkout repository
+                                uses: actions/checkout@v3
+                                        with:
+                                                  persist-credentials: false
+                                                            token: ${{ secrets.PAT }}
+                                                                  
+                                                                        - name: Update activity log
+                                                                                run: |
+                                                                                          echo "Commit on $(date)" >> activity.txt
+                                                                                                
+name: Daily Contribution
+
+on:
+  schedule:
+      - cron: '0 0 * * *'
+        workflow_dispatch:
+        
+        jobs:
+          commit:
+              runs-on: ubuntu-latest
+                  steps:
+                        - name: Checkout repository
+                                uses: actions/checkout@v3
+                                        with:
+                                                  persist-credentials: false
+                                                            token: ${{ secrets.PAT }}
+                                                                  
+                                                                        - name: Update activity log
+                                                                                run: |
+                                                                                          echo "Commit on $(date)" >> activity.txt
+                                                                                                
+name: Daily Contribution
+
+on:
+  schedule:
+      - cron: '0 0 * * *'
+        workflow_dispatch:
+        
+        jobs:
+          commit:
+              runs-on: ubuntu-latest
+                  steps:
+                        - name: Checkout repository
+                                uses: actions/checkout@v3
+                                        with:
+                                                  persist-credentials: false
+                                                            token: ${{ secrets.PAT }}
+                                                                  
+                                                                        - name: Update activity log
+                                                                                run: |
+                                                                                          echo "Commit on $(date)" >> activity.txt
+                                                                                                
+                                                                                                      - name: Set up Git
+                                                                                                              run: |
+                                                                                                                        git config --local user.email "manoharmanish03359@gmail.com"
+                                                                                                                                  git config --local user.name "mmpbrother94"
+                                                                                                                                        
+                                                                                                                                              - name: Commit and push changes
+                                                                                                                                                      run: |
+                                                                                                                                                                git add activity.txt
+                                                                                                                                                                          git commit -m "Daily contribution update - $(date)"
+                                                                                                                                                                                    git push origin main
+                                                                                                                                                                                            env:
+                                                                                                                                                                                                      GITHUB_TOKEN: ${{ secrets.PAT }}run: |
+                                                                                                                        git config --local user.email "manoharmanish03359@gmail.com"
+                                                                                                                                  git config --local user.name "mmpbrother94"
+                                                                                                                                        
+                                                                                                                                              - name: Commit and push changes
+                                                                                                                                                      run: |
+                                                                                                                                                                git add activity.txt
+                                                                                                                                                                          git commit -m "Daily contribution update - $(date)"
+                                                                                                                                                                                    git push origin main
+                                                                                                                                                                                            env:
+                                                                                                                                                                                                      GITHUB_TOKEN: ${{ secrets.PAT }}git config --local user.email "manoharmanish03359@gmail.com"
+                                                                                                                                  git config --local user.name "mmpbrother94"
+                                                                                                                                        
+                                                                                                                                              - name: Commit and push changes
+                                                                                                                                                      run: |
+                                                                                                                                                                git add activity.txt
+                                                                                                                                                                          git commit -m "Daily contribution update - $(date)"
+                                                                                                                                                                                    git push origin main
+                                                                                                                                                                                            env:
+                                                                                                                                                                                                      GITHUB_TOKEN: ${{ secrets.PAT }}git config --local user.email "manoharmanish03359@gmail.com"
+                                                                                                                                  git config --local user.name "mmpbrother94"
+                                                                                                                                        
+                                                                                                                                              - name: Commit and push changes
+                                                                                                                                                      run: |
+                                                                                                                                                                git add activity.txt
+                                                                                                                                                                          git commit -m "Daily contribution update - $(date)"
+                                                                                                                                                                                    git push origin main
+                                                                                                                                                                                            env:
+                                                                                                                                                                                                      GITHUB_TOKEN: ${{ secrets.PAT }}name: Daily Contribution
 on:
   schedule:
       - cron: '0 0 * * *'
