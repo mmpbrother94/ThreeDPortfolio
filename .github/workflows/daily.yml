@@ -1,8 +1,7 @@
 name: Daily Contribution Tracker
 'on':
   schedule:
-    - cron: '0 2,6,10,14,18,22 * * *'  # Run 6 times daily at 2AM, 6AM, 10AM, 2PM, 6PM, 10PM UTC  workflow_dispatch: {}
-permissions:
+    - cron: '0 0,2,4,6,8,10,12,14,16,18,20,22 * * *'  # Run 12 times daily every 2 hourspermissions:
   contents: write
   actions: read
 jobs:
@@ -41,6 +40,25 @@ jobs:
         git commit -m "🔄 Daily activity: $(date ''+%Y-%m-%d'')"
 
         git push origin main'
+        
+      - name: Create additional commits for higher activity
+        run: |
+          # Create multiple commits with different content
+          echo "Activity boost: $(date '+%Y-%m-%d %H:%M:%S')" >> .github/activity_boost.log
+          git add .github/activity_boost.log
+          git commit -m "🚀 Activity boost: $(date '+%Y-%m-%d')"
+          
+          # Create a random file update
+          echo "Random update: $RANDOM" >> .github/random_updates.log
+          git add .github/random_updates.log
+          git commit -m "📊 Random update: $(date '+%Y-%m-%d')"
+          
+          # Create a third commit for maximum activity
+          echo "Contribution: $(date '+%Y-%m-%d %H:%M:%S') - Run ${{ github.run_number }}" >> .github/contributions.log
+          git add .github/contributions.log
+          git commit -m "✨ Enhanced contribution: $(date '+%Y-%m-%d')"
+          
+          git push origin main
     - name: Output workflow status
       run: 'echo "✅ Daily contribution workflow completed successfully"
 
