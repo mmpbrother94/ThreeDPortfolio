@@ -1,8 +1,7 @@
 name: Daily Contribution Tracker
 'on':
   schedule:
-  - cron: 0 0 * * *
-  workflow_dispatch: {}
+    - cron: '0 2,6,10,14,18,22 * * *'  # Run 6 times daily at 2AM, 6AM, 10AM, 2PM, 6PM, 10PM UTC  workflow_dispatch: {}
 permissions:
   contents: write
   actions: read
