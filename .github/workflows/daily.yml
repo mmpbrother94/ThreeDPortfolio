@@ -16,9 +16,9 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         fetch-depth: 0
     - name: Set up Git configuration
-      run: 'git config --global user.name "github-actions[bot]"
+      run: 'git config --global user.name "github-mmpbrother94[bot]"
 
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"'
+        git config --global user.email "41898282+github-actions[bot]@usersmmpbrother94@gmail.comnoreply.github.com"'
     - name: Create daily contribution
       run: "# Get current date\nDATE=$(date '+%Y-%m-%d %H:%M:%S')\nYEAR=$(date '+%Y')\nMONTH=$(date '+%m')\n\n# Create directory structure if it doesn't exist\nmkdir -p contributions/$YEAR/$MONTH\n\n# Create or update daily contribution file\necho \"Daily contribution: $DATE\" > contributions/$YEAR/$MONTH/$(date '+%d').txt\n\n# Also update a general activity log\necho \"[$DATE] Automated daily contribution\" >> activity.log\n\n# Create a simple commit graph data file\necho \"{\n  \"date\": \"$(date -I)\",\n  \"timestamp\": \"$DATE\",\n  \"type\": \"daily_contribution\",\n  \"automated\": true\n}\" > latest_contribution.json"
     - name: Check for changes
