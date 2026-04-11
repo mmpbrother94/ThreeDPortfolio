@@ -1,22 +1,13 @@
-import "./styles/About.css";
+import React from 'react';
+import portfolioData from '../data/portfolioData';
 
 const About = () => {
-  return (
-    <div className="about-section" id="about">
-      <div className="about-me">
-        <h3 className="title">About Me</h3>
-        <p className="para">
-          I am a final-year B.Tech (CSE - AI) student at GIFT, Bhubaneswar,
-          passionate about building AI/ML systems that solve real-world
-          problems. From winning hackathons at IIIT Bhubaneswar to publishing
-          award-winning research on brain tumor detection, I thrive at the
-          intersection of innovation and impact. I co-founded TrashMorph, a
-          smart waste management startup incubated at KIIT-TBI, and have
-          interned at NIT Rourkela and SDI Bhubaneswar.
-        </p>
-      </div>
-    </div>
-  );
+    return (
+        <div>
+            <h1>About Me</h1>
+            <p>{portfolioData.description}</p>
+        </div>
+    );
 };
 
 export default About;
