@@ -33,7 +33,7 @@ const Work = () => {
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
               {projects.map((project, i) => (
-                <div className="carousel-slide" key={i}>
+                <div className="carousel-slide" key={project.title}>
                   <div className="carousel-content">
                     <div className="carousel-info">
                       <div className="carousel-number">
