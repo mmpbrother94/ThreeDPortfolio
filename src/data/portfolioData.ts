@@ -4,24 +4,41 @@ const portfolioData = {
     projects: [
         {
             title: "Brain Tumor Detector",
-            description: "A project aimed at detecting brain tumors using advanced image processing techniques.",
-            techStack: ["Python", "OpenCV", "TensorFlow"]
+            category: "AI / Healthcare",
+            description: "Hybrid deep learning system for automated brain tumor detection using U-Net++ and Swin Transformer. Won National Best Paper Award at RAECC 2025.",
+            techStack: ["Python", "PyTorch", "U-Net++", "Swin Transformer", "OpenCV"],
+            image: "/images/preview1.png",
+            link: "https://github.com/mmpbrother94"
         },
         {
             title: "TrashMorph",
-            description: "An innovative solution for waste management and recycling.",
-            techStack: ["JavaScript", "Node.js", "MongoDB"]
+            category: "IoT / Sustainability",
+            description: "Smart waste management platform with IoT sensors, ML-based waste classification, and a gamified rewards system. Incubated at KIIT-TBI.",
+            techStack: ["React", "Node.js", "MongoDB", "TensorFlow", "IoT"],
+            image: "/images/placeholder.webp",
+            link: "https://github.com/mmpbrother94"
         },
         {
             title: "Gringotts FinTech",
-            description: "A financial technology platform offering various financial services.",
-            techStack: ["React", "Node.js", "Express"]
+            category: "FinTech / AI",
+            description: "Fantasy stock trading platform gamified with AI-driven insights and blockchain-backed transactions. 1st Prize at IIIT Bhubaneswar Hackfest 2024.",
+            techStack: ["React", "Node.js", "Express", "Solidity", "Web3.js"],
+            image: "/images/placeholder.webp",
+            link: "https://github.com/mmpbrother94"
         },
         {
             title: "FarmFlow",
-            description: "A web application to optimize farming processes and management.",
-            techStack: ["Django", "Python", "JavaScript"]
+            category: "AgriTech / Web",
+            description: "End-to-end farm management web app with crop yield prediction, weather integration, and real-time advisory powered by ML models.",
+            techStack: ["Django", "Python", "JavaScript", "scikit-learn", "REST API"],
+            image: "/images/placeholder.webp",
+            link: "https://github.com/mmpbrother94"
         }
+    ],
+    skills: [
+        "Python", "PyTorch", "TensorFlow", "React", "Node.js",
+        "TypeScript", "MongoDB", "FastAPI", "Docker", "scikit-learn",
+        "Computer Vision", "NLP", "Transformers", "Firebase", "Git"
     ],
     career: [
         {
