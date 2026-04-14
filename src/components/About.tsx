@@ -1,13 +1,19 @@
-import React from 'react';
-import portfolioData from '../data/portfolioData';
+import "./styles/About.css";
+import portfolioData from "../data/portfolioData";
 
 const About = () => {
-    return (
-        <div>
-            <h1>About Me</h1>
-            <p>{portfolioData.description}</p>
-        </div>
-    );
+  return (
+    <div className="about-section">
+      <div className="about-me">
+        <h3>About Me</h3>
+        <p>
+          {portfolioData.about} Passionate about building intelligent systems at
+          the intersection of AI, full-stack development, and real-world impact —
+          from healthcare to agriculture and beyond.
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default About;

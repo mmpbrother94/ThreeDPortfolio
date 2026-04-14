@@ -11,6 +11,7 @@ import Work from "./Work";
 import setSplitText from "./utils/splitText";
 
 const TechStack = lazy(() => import("./TechStack"));
+const SkillsMarquee = lazy(() => import("./SkillsMarquee"));
 
 const MainContainer = () => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
@@ -42,9 +43,13 @@ const MainContainer = () => {
             <WhatIDo />
             <Career />
             <Work />
-            {isDesktopView && (
+            {isDesktopView ? (
               <Suspense fallback={<div>Loading....</div>}>
                 <TechStack />
+              </Suspense>
+            ) : (
+              <Suspense fallback={<div>Loading....</div>}>
+                <SkillsMarquee />
               </Suspense>
             )}
             <Contact />

@@ -1,0 +1,63 @@
+.skills-marquee-section {
+  width: 100%;
+  padding: 80px 0 60px;
+  overflow: hidden;
+}
+
+.skills-marquee-title {
+  font-size: 80px;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.skills-marquee-track {
+  margin-bottom: 16px;
+}
+
+.skills-marquee-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 24px;
+  margin: 0 10px;
+  border: 1px solid rgba(94, 234, 212, 0.3);
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #eae5ec;
+  background: rgba(94, 234, 212, 0.05);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.skills-marquee-tag:hover {
+  background: rgba(94, 234, 212, 0.15);
+  border-color: var(--accentColor);
+  color: var(--accentColor);
+}
+
+.skills-marquee-tag-alt {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.skills-marquee-tag-alt:hover {
+  background: rgba(94, 234, 212, 0.1);
+  border-color: var(--accentColor);
+  color: var(--accentColor);
+}
+
+@media only screen and (max-width: 900px) {
+  .skills-marquee-title {
+    font-size: 40px;
+    margin-bottom: 28px;
+  }
+
+  .skills-marquee-tag {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
